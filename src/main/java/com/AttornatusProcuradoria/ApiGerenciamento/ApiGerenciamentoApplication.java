@@ -1,4 +1,4 @@
-package com.AttornatusProcuradoria.ApiGerenciamento.Model.Service;
+package com.AttornatusProcuradoria.ApiGerenciamento;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -11,21 +11,44 @@ public class Cliente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @NotBlank
+
     private String nome;
-    @NotBlank
+
     private String enderecoPrincipal;
 
-    @NotBlank
-    private int cep;
+    private String enderecoSecundario;
 
-    @NotBlank
-    private String endereco;
-    @NotBlank
     private String dataNascimento;
-
-    @NotBlank
     private String cidade;
+
+    private String numero;
+    private String cep;
+    public String getEnderecoPrincipal() {
+        return enderecoPrincipal;
+    }
+
+    public Cliente(int id, String nome, String enderecoPrincipal, String enderecoSecundario, String dataNascimento, String cidade, String numero, String cep) {
+        this.id = id;
+        this.nome = nome;
+        this.enderecoPrincipal = enderecoPrincipal;
+        this.enderecoSecundario = enderecoSecundario;
+        this.dataNascimento = dataNascimento;
+        this.cidade = cidade;
+        this.numero = numero;
+        this.cep = cep;
+    }
+
+    public void setEnderecoPrincipal(String enderecoPrincipal) {
+        this.enderecoPrincipal = enderecoPrincipal;
+    }
+
+    public String getEnderecoSecundario() {
+        return enderecoSecundario;
+    }
+
+    public void setEnderecoSecundario(String enderecoSecundario) {
+        this.enderecoSecundario = enderecoSecundario;
+    }
 
     public String getCidade() {
         return cidade;
@@ -35,52 +58,18 @@ public class Cliente {
         this.cidade = cidade;
     }
 
+    public String getNumero() {
+        return numero;
+    }
 
-    public int getCep() {
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
+
+    public String getCep() {
         return cep;
     }
 
-    public void setCep(int cep) {
-        this.cep = cep;
-    }
-
-    public String getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
-    }
-
-    public Cliente(String nome, String enderecoPrincipal, String endereco, String dataNascimento, int cep, String cidade) {
-        this.nome = nome;
-        this.dataNascimento = dataNascimento;
-        this.enderecoPrincipal = enderecoPrincipal;
-        this.endereco = endereco;
-        this.cep = cep;
-        this.cidade = cidade;
-    }
-
-    public Cliente() {
-
-    }
-
-    public String getDataNascimento() {
-        return dataNascimento;
-    }
-
-    public void setDataNascimento(String dataNascimento) {
-        this.dataNascimento = dataNascimento;
-    }
-
-
-    public String getEnderecoPrincipal() {
-        return enderecoPrincipal;
-    }
-
-    public void setEnderecoPrincipal(String enderecoPrincipal) {
-        this.enderecoPrincipal = enderecoPrincipal;
-    }
 
     public int getId() {
         return id;
@@ -96,5 +85,21 @@ public class Cliente {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public String getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public void setDataNascimento(String dataNascimento) {
+        this.dataNascimento = dataNascimento;
+    }
+
+
+    public void setCep(String cep) {
+        this.cep = cep;
+    }
+
+    public Cliente() {
     }
 }
